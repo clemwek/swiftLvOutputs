@@ -8,3 +8,14 @@ func checkType(dataType: Any) -> String {
 }
 
 checkType(dataType: true)
+
+//: ### Create an extension of the String class with a method that returns an Array of words in a sentence called words.
+
+extension String {
+    func getWords() -> [String] {
+        return self.components(separatedBy: " ")
+    }
+}
+
+let name: String = "clement wekesa wafula"
+name.getWords()
